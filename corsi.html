@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GP Gym - Palestra Mesero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpg" href="img/Logo_Palestra_b.jpg">
+    <link rel="apple-touch-icon" href="img/Logo_Palestra_b.jpg">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-zinc-950 text-white overflow-x-hidden">
+
+    <div id="top"></div>
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-1 h-20 flex items-center">
+            <button id="hamburger" class="w-12 h-12 flex items-center justify-center text-3xl focus:outline-none transition-colors hover:text-orange-400">
+                <i id="hamburger-icon" class="fa-solid fa-bars text-white"></i>
+            </button>
+            <div class="flex items-center gap-3 ml-3">
+                <img src="img/Logo_Palestra_w_nobg.png" alt="GPGym Logo" class="logo-nav">
+                <a href="index.html#top" class="title-font cursor-pointer">GP GYM</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 h-full w-80 bg-zinc-950 border-r border-white/10 z-[70] shadow-2xl pt-6 transition-transform duration-300 overflow-y-auto pb-10" style="transform: translateX(-100%);">
+        <div class="flex justify-end px-6 mb-8">
+            <button onclick="toggleMenu()" class="text-4xl text-white hover:text-orange-400 transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="flex flex-col px-8 space-y-8 text-2xl font-medium">
+            <a href="index.html" onclick="toggleMenu()" class="hover:text-orange-400 py-2">Home</a>
+            <a href="offerta.html" onclick="toggleMenu()" class="hover:text-orange-400 py-2">Offerta</a>
+            <a href="servizi.html" onclick="toggleMenu()" class="hover:text-orange-400 py-2">Servizi</a>
+            <a href="corsi.html" onclick="toggleMenu()" class="hover:text-orange-400 py-2">Corsi</a>
+            <a href="contatti.html" onclick="toggleMenu()" class="hover:text-orange-400 py-2">Contatti</a>
+            <a href="dove-trovarci.html" onclick="toggleMenu()" class="hover:text-orange-400 py-2">Dove trovarci</a>
+        </div>
+    </div>
+
+    <!-- SEZIONE PRINCIPALE -->
+    <section class="pt-28 pb-28 md:pt-32 md:pb-36 relative overflow-hidden"
+        style="background: linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.88)), url('img/Gym_BW3.jpg') center/cover no-repeat fixed;">
+        
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
+            
+            <!-- Titolo -->
+            <h2 class="title-font text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-10 md:mb-16 leading-tight">
+                Corsi
+            </h2>
+
+            <!-- RIGA SUPERIORE: 3 riquadri -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+
+                <!-- Riquadro 1 -->
+                <div class="glass neon-card rounded-3xl overflow-hidden border border-transparent">
+                    <img src="https://picsum.photos/id/1015/800/500" alt="Corso 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl md:text-2xl font-semibold mb-3 flex items-center gap-0">
+                            <span class="step-number">1</span>
+                            Crossfit
+                        </h3>
+                        <p class="text-base text-zinc-300 leading-relaxed">
+                            Allenamento ad alta intensità che combina <span style="color: orange; font-weight: bold;">forza</span>, <span style="color: orange; font-weight: bold;">resistenza</span> e movimenti funzionali. Ideale per chi vuole superare i propri limiti e migliorare la condizione fisica generale.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Riquadro 2 -->
+                <div class="glass neon-card rounded-3xl overflow-hidden border border-transparent">
+                    <img src="https://picsum.photos/id/201/800/500" alt="Corso 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl md:text-2xl font-semibold mb-3 flex items-center gap-0">
+                            <span class="step-number">2</span>
+                            Danza
+                        </h3>
+                        <p class="text-base text-zinc-300 leading-relaxed">
+                            Un corso dinamico e coinvolgente che unisce <span style="color: orange; font-weight: bold;">movimento</span>, <span style="color: orange; font-weight: bold;">ritmo</span> e coordinazione. Perfetto per tonificare il corpo divertendosi e liberare lo stress.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Riquadro 3 -->
+                <div class="glass neon-card rounded-3xl overflow-hidden border border-transparent">
+                    <img src="https://picsum.photos/id/866/800/500" alt="Corso 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl md:text-2xl font-semibold mb-3 flex items-center gap-0">
+                            <span class="step-number">3</span>
+                            Sviluppo motorio
+                        </h3>
+                        <p class="text-base text-zinc-300 leading-relaxed">
+                            Programma dedicato al miglioramento delle <span style="color: orange; font-weight: bold;">capacità motorie</span>, dell’equilibrio e della coordinazione. Ideale per bambini, ragazzi e adulti che vogliono muoversi meglio.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGA INFERIORE: 3 riquadri -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-6 md:mt-8">
+
+                <!-- Riquadro 4 -->
+                <div class="glass neon-card rounded-3xl overflow-hidden border border-transparent">
+                    <img src="https://picsum.photos/id/64/800/500" alt="Corso 4" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl md:text-2xl font-semibold mb-3 flex items-center gap-0">
+                            <span class="step-number">4</span>
+                            Stabile Fight
+                        </h3>
+                        <p class="text-base text-zinc-300 leading-relaxed">
+                            Allenamento ispirato alle arti marziali che sviluppa <span style="color: orange; font-weight: bold;">forza</span>, <span style="color: orange; font-weight: bold;">reattività</span> e controllo del corpo. Un mix di tecnica e intensità adatto a tutti i livelli.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Riquadro 5 -->
+                <div class="glass neon-card rounded-3xl overflow-hidden border border-transparent">
+                    <img src="https://picsum.photos/id/1005/800/500" alt="Corso 5" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl md:text-2xl font-semibold mb-3 flex items-center gap-0">
+                            <span class="step-number">5</span>
+                            Boxe
+                        </h3>
+                        <p class="text-base text-zinc-300 leading-relaxed">
+                            Corso completo di boxe per migliorare <span style="color: orange; font-weight: bold;">tecnica</span>, <span style="color: orange; font-weight: bold;">potenza</span> e resistenza. Ideale sia per chi vuole imparare a difendersi sia per chi cerca un allenamento intenso e completo.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Riquadro 6 -->
+                <div class="glass neon-card rounded-3xl overflow-hidden border border-transparent">
+                    <img src="https://picsum.photos/id/1025/800/500" alt="Corso 6" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl md:text-2xl font-semibold mb-3 flex items-center gap-0">
+                            <span class="step-number">6</span>
+                            Corpi in Campo
+                        </h3>
+                        <p class="text-base text-zinc-300 leading-relaxed">
+                            Attività di gruppo orientata al <span style="color: orange; font-weight: bold;">movimento naturale</span>, al gioco e alla collaborazione. Perfetta per chi vuole allenarsi in modo leggero e coinvolgente.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-zinc-950 py-6 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-center gap-8 sm:gap-10 text-3xl sm:text-4xl">
+                <a href="https://www.facebook.com/share/1HF1QUmC4y/" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/gpgym.mesero?igsh=MW1wYTZhcmNqNWN4bg==" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div class="text-center text-zinc-500 text-sm mt-4">
+                © 2026 GPGym • Palestra Mesero • by 
+                <a href="https://www.instagram.com/davi_rossi08/" target="_blank">Davide Rossini</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll in alto al caricamento
+        window.addEventListener("load", () => {
+            window.scrollTo(0, 0);
+        });
+
+        // Menu mobile
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isOpen = false;
+
+        function toggleMenu() {
+            isOpen = !isOpen;
+            if (isOpen) {
+                mobileMenu.classList.remove('hidden');
+                setTimeout(() => mobileMenu.style.transform = 'translateX(0)', 10);
+            } else {
+                mobileMenu.style.transform = 'translateX(-100%)';
+                setTimeout(() => mobileMenu.classList.add('hidden'), 400);
+            }
+        }
+
+        document.querySelectorAll("#mobile-menu a").forEach(link => {
+            link.addEventListener("click", () => {
+                isOpen = false;
+                mobileMenu.style.transform = "translateX(-100%)";
+                setTimeout(() => mobileMenu.classList.add("hidden"), 300);
+            });
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!isOpen) return;
+            if (mobileMenu.contains(e.target)) return;
+            if (hamburger.contains(e.target)) return;
+            toggleMenu();
+        });
+
+        hamburger.addEventListener("click", (e) => {
+            e.stopPropagation();
+            toggleMenu();
+        });
+
+        // Bottone torna su
+        const backToTop = document.createElement("button");
+        backToTop.id = "backToTop";
+        backToTop.innerHTML = "↑";
+        backToTop.classList.add("btn-sub", "rounded-2xl", "font-semibold");
+        backToTop.style.padding = "6px 10px";
+        backToTop.style.fontSize = "18px";
+        backToTop.style.position = "fixed";
+        backToTop.style.bottom = "20px";
+        backToTop.style.right = "20px";
+        backToTop.style.opacity = "0";
+        backToTop.style.pointerEvents = "none";
+        backToTop.style.zIndex = "999999";
+        backToTop.style.transition = "opacity 0.25s ease";
+        document.body.appendChild(backToTop);
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 110) {
+                backToTop.style.opacity = "1";
+                backToTop.style.pointerEvents = "auto";
+            } else {
+                backToTop.style.opacity = "0";
+                backToTop.style.pointerEvents = "none";
+            }
+        });
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+
+</body>
+</html>
