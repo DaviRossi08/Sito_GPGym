@@ -2,12 +2,12 @@
 
 html {
     scroll-behavior: smooth;
-    color-scheme: dark only;
+    color-scheme: only dark;
 }
 
 :root {
     --accent: #FF6200;
-    color-scheme: dark only;
+    color-scheme: only dark;
     forced-color-adjust: none;
     -webkit-forced-color-adjust: none;
 }
@@ -21,8 +21,8 @@ html, body {
 
 * {
     max-width: 100%;
-    forced-color-adjust: none;          /* blocca il cambio colore della modalità notte */
-    -webkit-forced-color-adjust: none;
+    forced-color-adjust: none !important;
+    -webkit-forced-color-adjust: none !important;
 }
 
 img, video, iframe {
@@ -126,10 +126,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* ========== STEP NUMBER ========== */
+/* ========== STEP NUMBER - PROTEZIONE FORTE CONTRO MODALITÀ NOTTE ========== */
 .step-number {
-    background: #FF6200;
-    color: white;
+    background-color: #FF6200 !important;
+    background-image: linear-gradient(#FF6200, #FF6200) !important;
+    color: white !important;
     font-weight: bold;
     width: 42px;
     height: 42px;
@@ -141,6 +142,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 12px;
     line-height: 1;
     flex-shrink: 0;
+    forced-color-adjust: none !important;
+    -webkit-forced-color-adjust: none !important;
 }
 
 @media (min-width: 768px) {
@@ -194,17 +197,20 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
 }
 
-/* Icona quadrata accanto ai titoli dei riquadri */
+/* Icona quadrata accanto ai titoli dei riquadri - PROTEZIONE FORTE */
 .title-icon {
     width: 42px;
     height: 42px;
     border-radius: 10px;
     overflow: hidden;
     flex-shrink: 0;
-    background: #FF6200;
+    background-color: #FF6200 !important;
+    background-image: linear-gradient(#FF6200, #FF6200) !important;
     display: flex;
     align-items: center;
     justify-content: center;
+    forced-color-adjust: none !important;
+    -webkit-forced-color-adjust: none !important;
 }
 
 .title-icon img {
