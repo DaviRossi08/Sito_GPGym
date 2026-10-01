@@ -2,10 +2,12 @@
 
 html {
     scroll-behavior: smooth;
+    color-scheme: dark; /* forza tema scuro in ogni modalità (light/dark OS, browser, ecc.) */
 }
 
 :root {
     --accent: #FF6200;
+    color-scheme: dark; /* garantisce coerenza di scrollbars, form, UI browser su mobile e PC */
 }
 
 /* ========== FIX OSCILLAZIONE SU MOBILE ========== */
@@ -26,6 +28,8 @@ img, video, iframe {
 
 body {
     font-family: 'Inter', system-ui, sans-serif;
+    background-color: #000; /* mantiene sfondo nero identico in light/dark mode */
+    color: #fff;            /* mantiene testo bianco identico in ogni modalità */
 }
 
 .title-font {
@@ -44,6 +48,13 @@ h1, h2, h3, h4, h5, h6 {
 .hero-bg {
     background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.88)), 
                 url('img/Home_img.jpg') center/cover no-repeat fixed;
+}
+
+/* Su mobile lo fixed crea problemi di rendering → diventa scroll, aspetto identico */
+@media (max-width: 768px) {
+    .hero-bg {
+        background-attachment: scroll;
+    }
 }
 
 .neon-text {
