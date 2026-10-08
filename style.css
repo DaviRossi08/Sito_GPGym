@@ -49,24 +49,15 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 1px;
 }
 
-/* Sfondo fisso che non si muove mai */
-.fixed-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.88)),
-                url('img/Home_img.jpg') center/cover no-repeat;
-    z-index: -1;          /* sta dietro a tutto */
-    pointer-events: none; /* non interferisce con i click */
+.hero-bg {
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.88)), 
+                url('img/Home_img.jpg') center/cover no-repeat fixed;
 }
 
-/* La sezione hero non ha più lo sfondo */
-.hero-bg {
-    background: none !important; /* importante */
-    position: relative;
-    z-index: 1;
+@media (max-width: 768px) {
+    .hero-bg {
+        background-attachment: scroll;
+    }
 }
 
 .neon-text {
